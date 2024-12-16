@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "type": "module",
   "bin": {
-    "gendiff": "./gendiff.js"    
+    "gendiff": "bin/gendiff.js"    
   },
   "author": "Olga",
   "license": "ISC",
