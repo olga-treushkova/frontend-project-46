@@ -1,11 +1,23 @@
-// fileParser.js
 import fs from 'fs';
 
 export function readFileSync(filePath) {
-    return fs.readFileSync(filePath, 'utf-8');
+    try {
+        return fs.readFileSync(filePath, 'utf-8');
+    } catch (error) {
+        console.error(`Ошибка при чтении файла: ${filePath}`);
+        console.error(error.message);
+        process.exit(1);
+    }
 }
 
 export function parseJsonFile(filePath) {
-    const fileContent = readFileSync(filePath);
-    return JSON.parse(fileContent);
+    try {
+        const fileContent = readFileSync(filePath);
+        return JSON.parse(fileContent);
+    } catch (error) {
+        console.error(`Ошибка при парсинге JSON файла: ${filePath}`);
+        console.error(error.message);
+        process.exit(1); 
+    }
 }
+
