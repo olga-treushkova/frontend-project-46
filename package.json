@@ -5,7 +5,7 @@
   "main": "gendiff.js",
   "type": "module",
   "bin": {
-    "gendiff": "bin/gendiff.js"    
+    "gendiff": "bin/gendiff.js"
   },
   "author": "Olga",
   "license": "ISC",
@@ -14,5 +14,13 @@
   },
   "scripts": {
     "start": "node gendiff.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@typescript-eslint/eslint-plugin": "^8.21.0",
+    "@typescript-eslint/parser": "^8.21.0",
+    "eslint": "^9.19.0",
+    "globals": "^15.14.0",
+    "typescript-eslint": "^8.21.0"
   }
 }
